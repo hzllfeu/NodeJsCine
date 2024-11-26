@@ -1,24 +1,42 @@
 const { Model, DataTypes } = require("sequelize");
-const connection = require("./db");  
+const connection = require("./db");
 
-class Reserv extends Model {}
+class Review extends Model {}
 
-Reserv.init(
-    {
-      nbSalle:{
-        type: DataTypes.INTEGER,
+Review.init(
+  {
+    contenu: {
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
-      nbPlace:{
-        type: DataTypes.INTEGER,
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
       },
-      // connect to film.js ?
-      film:{
-        type: DataTypes.STRING,
-      }
     },
-    {
-      sequelize: connection,
-    }
+    film_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "films",
+        key: "id",
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "users",
+        key: "id",
+      },
+    },
+  },
+  {
+    sequelize: connection,
+  }
 );
 
-module.exports = Reserv;
+module.exports = Review;
