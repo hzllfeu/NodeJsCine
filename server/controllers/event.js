@@ -11,7 +11,13 @@ exports.cget = async (req, res, next) => {
 
 exports.post = async (req, res, next) => {
     try {
-      const newEvent = await Event.create(req.body);
+      const newEvent = await Event.create({
+        name: req.body.name,
+        genre: req.body.genre,
+        time: req.body.time,
+        date: req.body.date,
+        numberPerson: req.body.numberPerson
+    });
       res.status(201).json(newEvent);
     } catch (error) {
       next(error);
@@ -61,3 +67,4 @@ exports.get = async (req, res, next) => {
       next(error);
     }
   };
+

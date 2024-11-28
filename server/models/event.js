@@ -7,18 +7,23 @@ Event.init(
     {
         name:{
             type: DataTypes.STRING,
+            allowNull: false
         },
         genre:{
             type: DataTypes.STRING,
+            allowNull: false
         },
         time:{
             type: DataTypes.INTEGER,
+            allowNull: false
         },
         date:{
             type: DataTypes.DATE,
+            allowNull: false
         },
         numberPerson:{
             type: DataTypes.INTEGER,
+            allowNull: false
         },
     },
     {
