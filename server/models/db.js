@@ -1,11 +1,25 @@
 const { Sequelize } = require("sequelize");
 
-//const defaultDatabaseUrl = "mysql://username:password@localhost:3306/dbname"; modifier 
+const NAME = process.env.DB_NAME || "cinema";
+const USER = process.env.DB_USER || "root";
+const PASSWORD = process.env.DB_PASSWORD || "";
+const HOST = process.env.DB_HOST || "localhost";
+const PORT = process.env.DB_PORT || 3306;
 
-const connection = new Sequelize(
-  process.env.DATABASE_URL ?? defaultDatabaseUrl
-);
+const sequelize = new Sequelize(NAME, USER, PASSWORD, {
+  host: HOST,
+  port: PORT,
+  dialect: "mysql",
+  logging: false,
+});
 
-connection.authenticate().then(() => console.log("Database is ready"));
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Connexion reussie");
+  } catch (error) {
+    console.error("Erreur:", error);
+  }
+})();
 
-module.exports = connection;  
+module.exports = sequelize;
