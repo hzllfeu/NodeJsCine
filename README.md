@@ -1,3 +1,10 @@
-# NodeJsCine
-Projet NodeJs ESILV
-start...
+
+# API cinéma
+
+...
+
+
+# Membres 
+
+Giougt : Alexandre LOGUT <br />
+hzllfeu : Louis Mouchon 
