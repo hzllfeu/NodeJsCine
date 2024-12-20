@@ -1,1 +1,64 @@
- 
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMwOTY5OTE3fQ.c_iz3nB96MwGn0RRpkJ6iqQokzA7Xx1htCWIeeQS7LI
+
+###
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "fullName": "Jane Doe",
+    "email": "jane@doe.pt",
+    "password": "123456azAZ!ç",
+    "birthday": "1990-01-01",
+    "role": "ADMIN"
+}
+
+###
+PATCH http://localhost:3000/users/4
+content-type: application/json
+
+{
+    "birthday": "1990-01-01"
+}
+
+###
+GET http://localhost:3000/users/1234567
+
+###
+DELETE http://localhost:3000/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMwOTY3NjI3fQ.JAKRfMzjGgt8iQM6UPz6VPNObl8NtRUuOPCXmsm8QQo
+
+###
+GET http://localhost:3000/animals
+
+###
+POST http://localhost:3000/animals
+content-type: application/json
+
+{
+    "name": "Jane Doe",
+    "race": "Chien"
+}
+
+###
+PATCH http://localhost:3000/animals/1
+content-type: application/json
+
+{
+    "race": "Chat",
+}
+
+###
+GET http://localhost:3000/animals/1
+
+###
+DELETE http://localhost:3000/animals/1
+
+###
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "email": "jane@doe.pt",
+    "password": "1990-01-01"
+}

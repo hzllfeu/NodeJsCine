@@ -1,25 +1,31 @@
 const { Sequelize } = require("sequelize");
 
-const NAME = process.env.DB_NAME || "cinema";
-const USER = process.env.DB_USER || "root";
-const PASSWORD = process.env.DB_PASSWORD || "";
-const HOST = process.env.DB_HOST || "localhost";
-const PORT = process.env.DB_PORT || 3306;
+// Définir l'URL par défaut pour se connecter à la base "cinema"
+const defaultDatabaseUrl = "mysql://root:pass@localhost:3306/cinema";
 
-const sequelize = new Sequelize(NAME, USER, PASSWORD, {
-  host: HOST,
-  port: PORT,
-  dialect: "mysql",
-  logging: false,
-});
+// Utiliser DATABASE_URL depuis les variables d'environnement ou l'URL par défaut
+const connection = new Sequelize(
+  process.env.DATABASE_URL ?? defaultDatabaseUrl
+);
 
-(async () => {
+async function testConnection() {
   try {
-    await sequelize.authenticate();
-    console.log("Connexion reussie");
-  } catch (error) {
-    console.error("Erreur:", error);
-  }
-})();
+    console.log("Attempting to authenticate...");
+    await connection.authenticate();
+    console.log("Connection has been established successfully.");
 
-module.exports = sequelize;
+    console.log("Executing test query...");
+    const [results] = await connection.query("SELECT NOW();");
+    console.log("Query executed successfully. Current time:", results[0]['NOW()']);
+  } catch (error) {
+    console.error("An error occurred:", error.message);
+  } finally {
+    console.log("Closing connection...");
+    await connection.close();
+    console.log("Connection closed.");
+  }
+}
+
+testConnection();
+
+module.exports = connection;

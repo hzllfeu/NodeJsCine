@@ -9,18 +9,18 @@ services:
       - "3000:3000"
     environment:
       PORT: 3000
-      # DATABASE_URL: mysql://root:password@db:3306/db
+      DATABASE_URL: mysql://root:pass@db:3306/cinema
       JWT_SECRET: secret
     depends_on:
       - db
 
   db:
-    #image: mysql:latest
+    image: mysql:latest
     environment:
-      #MYSQL_ROOT_PASSWORD: password
-      #MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: cinema
     volumes:
       - db-data:/var/lib/mysql
 
 volumes:
-  db-data: {} 
+  db-data: {}
