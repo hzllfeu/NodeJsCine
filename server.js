@@ -1,5 +1,5 @@
 const express = require("express");
-const checkAuth = require("./middlewares/checkAuth");
+const checkAuth = require("./server/middlewares/checkAuth");
 
 const app = express();
 
@@ -10,13 +10,13 @@ app.get("/", (request, response, next) => {
 //app.use(parseBody);
 app.use(express.json() /* body-parser lib */);
 
-app.use(require("./routes/security"));
+app.use(require("./server/routes/security"));
 
 // All routes are protected
 //app.use(checkAuth);
-app.use(require("./routes/animals"));
+app.use(require("./server/routes/film"));
 app.use(
-  /** only user routes are protected **/ /*checkAuth,*/ require("./routes/users")
+  /** only user routes are protected **/ /*checkAuth,*/ require("./server/routes/users")
 );
 
 app.use((error, req, res, next) => {
