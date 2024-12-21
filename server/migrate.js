@@ -2,7 +2,9 @@ const connection = require("./models/db");
 require("./models/user");
 require("./models/event");
 require("./models/film");
-require("./models/reserv");
+require("./models/reviews");
+require("./models/new_cinema");
+
 
 connection
   .sync({
