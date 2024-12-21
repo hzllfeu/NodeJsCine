@@ -1,5 +1,5 @@
 USE cinema;
-CREATE TABLE Event (
+CREATE TABLE Events (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     genre VARCHAR(255) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE Event (
     date DATE NOT NULL,
     numberPerson INT NOT NULL
 );
-CREATE TABLE users (
+CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     activated BOOLEAN DEFAULT false,
     fullName VARCHAR(255) NULL,
@@ -20,7 +20,7 @@ CREATE TABLE users (
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT email_unique UNIQUE (email)
 );
-CREATE TABLE films (
+CREATE TABLE Films (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     genre ENUM('Action', 'Aventure', 'Comédie', 'Drame', 'Romance', 'Horreur', 'Science-fiction', 'Fantasy', 'Thriller', 'Documentaire', 'Animation', 'Historique'),
@@ -30,4 +30,13 @@ CREATE TABLE films (
     director VARCHAR(255) NULL,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+CREATE TABLE Cinemas (
+    id INT AUTO_INCREMENT PRIMARY KEY,       
+    name VARCHAR(255) NOT NULL,               
+    numberPlace INT NOT NULL,                 
+    currentTime INT NOT NULL,                 
+    createdDate DATE NOT NULL,                
+    numberPerson INT NOT NULL,                
+    organization VARCHAR(255) NOT NULL        
 );
