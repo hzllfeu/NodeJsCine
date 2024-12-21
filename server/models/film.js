@@ -31,7 +31,7 @@ Film.init(
     },
     {
         sequelize: connection,
-        tableName: Film,
+        tableName: "Films",
         timestamps: true
     }
 );

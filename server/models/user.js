@@ -49,7 +49,7 @@ User.init(
   },
   {
     sequelize: connection,
-    tableName: User,
+    tableName: "Users",
     timestamps: true
   }
 );

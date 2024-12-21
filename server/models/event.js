@@ -33,7 +33,7 @@ Event.init(
     },
     {
         sequelize: connection,
-        tableName: Event,
+        tableName: "Events",
         timestamps: true
     }
 );
