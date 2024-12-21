@@ -23,9 +23,16 @@ Film.init(
         director:{
             type: DataTypes.STRING,
         },
+        id:{
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+        }
     },
     {
         sequelize: connection,
+        tableName: "Films",
+        timestamps: true
     }
 );
 module.exports = Film;

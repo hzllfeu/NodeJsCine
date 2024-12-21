@@ -25,9 +25,16 @@ Event.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        id:{
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+        },
     },
     {
         sequelize: connection,
+        tableName: "Events",
+        timestamps: true
     }
 );
 

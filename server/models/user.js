@@ -41,9 +41,16 @@ User.init(
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    id:{
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    }
   },
   {
     sequelize: connection,
+    tableName: "Users",
+    timestamps: true
   }
 );
 
