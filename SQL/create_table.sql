@@ -40,3 +40,16 @@ CREATE TABLE Cinemas (
     numberPerson INT NOT NULL,                
     organization VARCHAR(255) NOT NULL        
 );
+
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,          
+    contenu TEXT NOT NULL,                       
+    rating INT NOT NULL CHECK (rating >= 1 AND rating <= 5), 
+    film_id INT NOT NULL,                        
+    user_id INT NOT NULL,                        
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+    FOREIGN KEY (film_id) REFERENCES films(id) ON DELETE CASCADE, 
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE  
+);
+
