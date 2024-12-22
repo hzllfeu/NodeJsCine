@@ -20,6 +20,9 @@ app.use("/cinemas", require("./server/routes/new_cinema")); // Intégration du r
 // Routes pour les films
 app.use("/films", require("./server/routes/film"));
 
+// Routes for events
+app.use("/events",require("./server/routes/event"));
+
 // Routes pour les utilisateurs (avec protection spécifique si nécessaire)
 app.use("/users", checkAuth, require("./server/routes/users"));
 

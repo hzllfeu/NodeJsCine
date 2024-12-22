@@ -11,6 +11,30 @@ content-type: application/json
 }
 
 ###
+POST http://localhost:3000/events
+content-type: application/json
+
+{
+    "name": "Tech Conference",
+    "genre": "Education",
+    "time": 240,
+    "date": "2024-11-15",
+    "numberPerson": 300
+}
+
+###
+POST http://localhost:3000/events
+content-type: application/json
+
+{
+    "name": "Concert Night",
+    "genre": "Music",
+    "time": 180,
+    "date": "2024-12-31",
+    "numberPerson": 500
+}
+
+###
 GET http://localhost:3000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMwOTY5OTE3fQ.c_iz3nB96MwGn0RRpkJ6iqQokzA7Xx1htCWIeeQS7LI
 
@@ -50,3 +74,4 @@ content-type: application/json
     "email": "jane@doe.pt",
     "password": "1990-01-01"
 }
+

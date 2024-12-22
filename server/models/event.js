@@ -34,7 +34,7 @@ Event.init(
     {
         sequelize: connection,
         tableName: "Events",
-        timestamps: true
+        timestamps: false
     }
 );
 
