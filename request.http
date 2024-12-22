@@ -57,4 +57,15 @@ Content-Type: application/json
     "user_id": 2
 }
 
-### user ...
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "Password123!",
+  "birthday": "1990-01-01",
+  "role": "USER",
+}
+
