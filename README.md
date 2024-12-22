@@ -22,7 +22,14 @@ Rendu Indiquer dans le champs de rendu :
 
 https://github.com/hzllfeu/NodeJsCine
 
+# NOM_DU_PROJET
+completer 
+## Description
+completer 
 # Membres 
 
 Giougt : Alexandre LOGUT <br />
 hzllfeu : Louis Mouchon 
+
+## Fonctionnalités
+completer 
