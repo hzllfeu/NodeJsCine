@@ -1,22 +1,41 @@
-Consignes Nombre de personnes par groupe: 3 Règles de constitution des groupes: Libre
+# Consignes
 
-Objectifs Sujet du projet: Création d'une API Restfull (pas de front à créer) Type de rendu: Sources du projet (sans node_modules) Date de rendu de projet: 27/12/2023 23H42
+- **Nombre de personnes par groupe** : 3
+- **Règles de constitution des groupes** : Libre
 
-Le code doit être rendu sous Git (GitHub ou Gitlab, projet publique). Chaque étudiant du groupe doit avoir travaillé sur le projet (avoir des commits à son nom), sinon 0.
+# Objectifs
 
-Soumettre le lien Git dans le champs texte de soumission.
+- **Sujet du projet** : Création d'une API Restfull (pas de front à créer)
+- **Type de rendu** : Sources du projet (sans `node_modules`)
+- **Date de rendu de projet** : 22/12/2024 à 23h42
 
-Evaluations En l'absence de travail d'un étudiant, l'étudiant se verra attribuer la note de 0.
+Le code doit être rendu sous Git (GitHub ou GitLab, projet public).
+Chaque étudiant du groupe doit avoir travaillé sur le projet (avoir des commits à son nom), sinon la note sera 0.
 
-Si une triche est détectée, la note du groupe sera de 0.
+Soumettre le lien Git dans le champ texte de soumission.
 
-L'aspect technique du projet sera testé automatiquement, il faudra donc bien respecter les normes RESTFULL, les formats des entités ainsi que les règles de gestion des données.
+# Évaluations
 
-Cahier des charges Créer une API RESTFULL sur un projet libre.
+- En l'absence de travail d'un étudiant, l'étudiant se verra attribuer la note de 0.
+- Si une triche est détectée, la note du groupe sera de 0.
+- L'aspect technique du projet sera testé automatiquement. Il faudra donc bien respecter :
+  - Les normes RESTFULL
+  - Les formats des entités
+  - Les règles de gestion des données
 
-Critères:
+# Cahier des charges
 
-Avoir au moins 3 entités en plus de l'entité(Model) User Mettre en place l'authentification JWT Utilisation de Sequelize pour la partie BDD Avoir une gestion de droits (unitaire/rôle ou les deux) Avoir une bonne hiérarchie de projet Avoir une bonne architecture logicielle Respecter la norme RESTFULL
+Créer une API RESTFULL sur un projet libre.
+
+## Critères :
+
+- Avoir au moins 3 entités en plus de l'entité (Model) `User`
+- Mettre en place l'authentification JWT
+- Utiliser Sequelize pour la partie BDD
+- Avoir une gestion de droits (unitaire, par rôle ou les deux)
+- Avoir une bonne hiérarchie de projet
+- Avoir une bonne architecture logicielle
+- Respecter la norme RESTFULL
 
 Rendu Indiquer dans le champs de rendu :
 
