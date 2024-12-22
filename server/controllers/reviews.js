@@ -1,4 +1,4 @@
-const Review = require("../models/review");
+const Review = require("../models/reviews");
 
 exports.cget = async (req, res, next) => {
   try {

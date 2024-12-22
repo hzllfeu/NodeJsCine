@@ -1,64 +1,71 @@
-GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMwOTY5OTE3fQ.c_iz3nB96MwGn0RRpkJ6iqQokzA7Xx1htCWIeeQS7LI
+POST http://localhost:3000/cinemas
+content-type: application/json
+
+{
+    "name": "Grand Cinema",
+    "numberPlace": 250,
+    "currentTime": 120,
+    "createdDate": "2024-12-22",
+    "numberPerson": 5,
+    "organization": "Cinema Group"
+}
+
+###
+POST http://localhost:3000/events
+content-type: application/json
+
+{
+    "name": "Tech Conference",
+    "genre": "Education",
+    "time": 240,
+    "date": "2024-11-15",
+    "numberPerson": 300
+}
+
+###
+POST http://localhost:3000/events
+content-type: application/json
+
+{
+    "name": "Concert Night",
+    "genre": "Music",
+    "time": 180,
+    "date": "2024-12-31",
+    "numberPerson": 500
+}
+
+
+###
+POST http://localhost:3000/reviews
+Content-Type: application/json
+
+{
+    "contenu": "Excellente performance des acteurs, mais le scénario était prévisible.",
+    "rating": 4,
+    "film_id": 1,
+    "user_id": 2
+}
+
+###
+POST http://localhost:3000/reviews
+Content-Type: application/json
+
+{
+    "contenu": "j'ai adoré le film , dommage qu'il ne soit pas plus long.",
+    "rating": 5,
+    "film_id": 1,
+    "user_id": 2
+}
 
 ###
 POST http://localhost:3000/users
-content-type: application/json
+Content-Type: application/json
 
 {
-    "fullName": "Jane Doe",
-    "email": "jane@doe.pt",
-    "password": "123456azAZ!ç",
-    "birthday": "1990-01-01",
-    "role": "ADMIN"
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "Password123!",
+  "birthday": "1990-01-01",
+  "role": "USER",
 }
 
-###
-PATCH http://localhost:3000/users/4
-content-type: application/json
-
-{
-    "birthday": "1990-01-01"
-}
-
-###
-GET http://localhost:3000/users/1234567
-
-###
-DELETE http://localhost:3000/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMwOTY3NjI3fQ.JAKRfMzjGgt8iQM6UPz6VPNObl8NtRUuOPCXmsm8QQo
-
-###
-GET http://localhost:3000/animals
-
-###
-POST http://localhost:3000/animals
-content-type: application/json
-
-{
-    "name": "Jane Doe",
-    "race": "Chien"
-}
-
-###
-PATCH http://localhost:3000/animals/1
-content-type: application/json
-
-{
-    "race": "Chat",
-}
-
-###
-GET http://localhost:3000/animals/1
-
-###
-DELETE http://localhost:3000/animals/1
-
-###
-POST http://localhost:3000/login
-content-type: application/json
-
-{
-    "email": "jane@doe.pt",
-    "password": "1990-01-01"
-}
