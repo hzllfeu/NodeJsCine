@@ -41,14 +41,17 @@ Rendu Indiquer dans le champs de rendu :
 
 https://github.com/hzllfeu/NodeJsCine
 
-# NOM_DU_PROJET
-completer 
-## Description
-completer 
+### NOM_DU_PROJET
+Cinema API
+### Description
+Une API développé en javascript qui permet de stocké des données sur des cinémas, des films, des événements et des avis d'utilisateurs.
 # Membres 
 
 Giougt : Alexandre LOGUT <br />
 hzllfeu : Louis Mouchon 
 
 ## Fonctionnalités
-completer 
+évènement lié au cinema: ajouter un nouvel évènement , modifier un évènement planifié , supprimer un évènement a venir et trouver un évènement spécifique. 
+film: ajouter des nouveaux films , mettre a jour un film spécifique , supprimer un film existant par son ID.
+cinema: sélectionner un cinema , ajouté un nouveau cinéma , mettre a jour ces informations et le supprimé par son ID.
+commentaire: ajouter un nouvel avis sur un film , modifier son propre avis , supprimer son avis et trouver un avis spécifique. 
