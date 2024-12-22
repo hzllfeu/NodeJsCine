@@ -51,7 +51,7 @@ Giougt : Alexandre LOGUT <br />
 hzllfeu : Louis Mouchon 
 
 ## Fonctionnalités
-évènement lié au cinema: ajouter un nouvel évènement , modifier un évènement planifié , supprimer un évènement a venir et trouver un évènement spécifique. <br>
-film: ajouter des nouveaux films , mettre a jour un film spécifique , supprimer un film existant par son ID. <br>
-cinema: sélectionner un cinema , ajouté un nouveau cinéma , mettre a jour ces informations et le supprimé par son ID. <br>
-commentaire: ajouter un nouvel avis sur un film , modifier son propre avis , supprimer son avis et trouver un avis spécifique. <br>
+**évènement lié au cinema**: ajouter un nouvel évènement , modifier un évènement planifié , supprimer un évènement a venir et trouver un évènement spécifique. <br>
+**film**: ajouter des nouveaux films , mettre a jour un film spécifique , supprimer un film existant par son ID. <br>
+**cinema**: sélectionner un cinema , ajouté un nouveau cinéma , mettre a jour ces informations et le supprimé par son ID. <br>
+**commentaire**: ajouter un nouvel avis sur un film , modifier son propre avis , supprimer son avis et trouver un avis spécifique. <br>
