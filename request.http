@@ -34,44 +34,27 @@ content-type: application/json
     "numberPerson": 500
 }
 
-###
-GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMwOTY5OTE3fQ.c_iz3nB96MwGn0RRpkJ6iqQokzA7Xx1htCWIeeQS7LI
 
 ###
-POST http://localhost:3000/users
-content-type: application/json
+POST http://localhost:3000/reviews
+Content-Type: application/json
 
 {
-    "fullName": "Jane Doe",
-    "email": "jane@doe.pt",
-    "password": "123456azAZ!ç",
-    "birthday": "1990-01-01",
-    "role": "ADMIN"
+    "contenu": "Excellente performance des acteurs, mais le scénario était prévisible.",
+    "rating": 4,
+    "film_id": 1,
+    "user_id": 2
 }
 
 ###
-PATCH http://localhost:3000/users/4
-content-type: application/json
+POST http://localhost:3000/reviews
+Content-Type: application/json
 
 {
-    "birthday": "1990-01-01"
+    "contenu": "j'ai adoré le film , dommage qu'il ne soit pas plus long.",
+    "rating": 5,
+    "film_id": 1,
+    "user_id": 2
 }
 
-###
-GET http://localhost:3000/users/1234567
-
-###
-DELETE http://localhost:3000/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMwOTY3NjI3fQ.JAKRfMzjGgt8iQM6UPz6VPNObl8NtRUuOPCXmsm8QQo
-
-
-###
-POST http://localhost:3000/login
-content-type: application/json
-
-{
-    "email": "jane@doe.pt",
-    "password": "1990-01-01"
-}
-
+### user ...

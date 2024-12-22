@@ -23,6 +23,9 @@ app.use("/films", require("./server/routes/film"));
 // Routes for events
 app.use("/events",require("./server/routes/event"));
 
+// Routes for reviews
+app.use("/reviews",require("./server/routes/review"));
+
 // Routes pour les utilisateurs (avec protection spécifique si nécessaire)
 app.use("/users", checkAuth, require("./server/routes/users"));
 
