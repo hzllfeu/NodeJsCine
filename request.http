@@ -1,3 +1,16 @@
+POST http://localhost:3000/cinemas
+content-type: application/json
+
+{
+    "name": "Grand Cinema",
+    "numberPlace": 250,
+    "currentTime": 120,
+    "createdDate": "2024-12-22",
+    "numberPerson": 5,
+    "organization": "Cinema Group"
+}
+
+###
 GET http://localhost:3000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMwOTY5OTE3fQ.c_iz3nB96MwGn0RRpkJ6iqQokzA7Xx1htCWIeeQS7LI
 
@@ -28,31 +41,6 @@ GET http://localhost:3000/users/1234567
 DELETE http://localhost:3000/users/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMwOTY3NjI3fQ.JAKRfMzjGgt8iQM6UPz6VPNObl8NtRUuOPCXmsm8QQo
 
-###
-GET http://localhost:3000/animals
-
-###
-POST http://localhost:3000/animals
-content-type: application/json
-
-{
-    "name": "Jane Doe",
-    "race": "Chien"
-}
-
-###
-PATCH http://localhost:3000/animals/1
-content-type: application/json
-
-{
-    "race": "Chat",
-}
-
-###
-GET http://localhost:3000/animals/1
-
-###
-DELETE http://localhost:3000/animals/1
 
 ###
 POST http://localhost:3000/login

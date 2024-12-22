@@ -1,4 +1,4 @@
-const Cinema = require("../models/cinema");
+const Cinema = require("../models/new_cinema");
 
 // GET /cinemas (Retrieve all cinemas)
 exports.cget = async (req, res, next) => {
